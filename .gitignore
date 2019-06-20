@@ -1,3 +1,10 @@
 .idea
 .DS_Store
 /Data/conf/db.php
+/Data/logs/Cache/Admin/*.php
+/Data/logs/Cache/Home/*.php
+/Data/logs/Cache/User/*.php
+/Data/logs/Cache/Wap/*.php
+/Data/logs/Logs/*.log
+/Data/logs/Temp/*
+!/Data/logs/Temp/index.html
