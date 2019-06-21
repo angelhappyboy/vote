@@ -81,7 +81,7 @@
         IEBinary_getLength = LenB(strBinary)
     End Function
     </script>
-<script type="text/javascript" src="{iMicms::STATICS}/vote/js/localResizeIMG2.js"></script>
+<script type="text/javascript" src="{iMicms::STATICS}/vote/js/lrz.all.bundle.js"></script>
 <script type="text/javascript" src="{iMicms::STATICS}/vote/js/mobileBUGFix.mini.js"></script>
 
     <div class="apply">
@@ -242,15 +242,9 @@
         var viewImg = $("#imglist");
         var imgurl = '';
         var imgcount = 0;
-        $('#upload_image').localResizeIMG({
-            width: 480,
-            quality: 0.8,
-            success: function (result) {
+        document.querySelector('#upload_image').addEventListener('change', function(){
+            lrz(this.files[0]).then(function(result) {
                 var status = true;
-                if (result.height > 1600) {
-                    status = false;
-                    alert("照片最大高度不超过1600像素");
-                }
                 if (viewImg.find("li").length > {iMicms:$xzpic}) {
                     status = false;
                     alert("最多上传{iMicms:$picnum}张照片");
@@ -268,7 +262,7 @@
                     });
                     imgcount++;
                 }
-            }
+            });
         });
     })();
 </script>
