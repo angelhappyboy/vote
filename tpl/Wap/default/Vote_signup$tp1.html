@@ -243,7 +243,9 @@
         var imgurl = '';
         var imgcount = 0;
         document.querySelector('#upload_image').addEventListener('change', function(){
-            lrz(this.files[0]).then(function(result) {
+            lrz(this.files[0], {
+                width: 800
+            }).then(function(result) {
                 var status = true;
                 if (viewImg.find("li").length > {iMicms:$xzpic}) {
                     status = false;
@@ -252,9 +254,9 @@
                 if (status) {
                     viewImg.append('<li><span class="pic_time"><span class="p_img"></span><em>50%</em></span></li>');
                     viewImg.find("li:last-child").html('<span class="del"></span><img class="wh60" src="' + result.base64 + '"/><input type="hidden" id="file'
-                    + imgcount
-                    + '" name="fileup[]" value="'
-                    + result.clearBase64 + '">');
+                        + imgcount
+                        + '" name="fileup[]" value="'
+                        + result.clearBase64 + '">');
 
                     $(".del").on("click",function(){
                         $(this).parent('li').remove();
@@ -355,7 +357,7 @@ $('.ico_4').on('click', function(){
 </notempty>
 
 <div style="display:none">
-<?php 
+<?php
 	echo html_entity_decode(htmlspecialchars_decode($vote['cnzz']));  
 	?>
 	</div></body>
