@@ -12,6 +12,7 @@
 // 系统默认的核心行为扩展列表文件
 return array(
     'app_init'      =>  array(
+        'CheckAgent'
     ),
     'app_begin'     =>  array(
         'ReadHtmlCache', // 读取静态缓存
