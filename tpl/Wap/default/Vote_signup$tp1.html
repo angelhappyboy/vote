@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" lang="zh-Hans">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=uft-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
@@ -9,18 +9,16 @@
     <meta charset="uft-8">
     <title>{iMicms:$vote.title}</title>
     <meta name="description" content="{iMicms:$vote.title}">
-    <link rel="stylesheet" href="{iMicms::STATICS}/vote/index{iMicms:$vote['moban']}/touch.css">    
-	<script type="text/javascript" src="{iMicms::STATICS}/vote/index{iMicms:$vote['moban']}/jquery-2.1.3.min.js"></script>
-
-                 <script type="text/javascript" src="{iMicms::STATICS}/vote/index{iMicms:$vote['moban']}/app.js"></script>
-                 <script type="text/javascript" src="{iMicms::STATICS}/vote/index{iMicms:$vote['moban']}/jquery.masonry.min.js"></script>
-  <style>
-.slider{display:none;}
-.focus span{width:5px;height:5px;margin-left:5px;border-radius:50%;background:#CDCDCD;font-size:0}
-.focus span.current{background:red;}
-</style>
-                
-    </head>
+    <link rel="stylesheet" href="{iMicms::STATICS}/vote/index{iMicms:$vote['moban']}/touch.css">
+    <script type="text/javascript" src="{iMicms::STATICS}/vote/index{iMicms:$vote['moban']}/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="{iMicms::STATICS}/vote/index{iMicms:$vote['moban']}/app.js"></script>
+    <script type="text/javascript" src="{iMicms::STATICS}/vote/index{iMicms:$vote['moban']}/jquery.masonry.min.js"></script>
+    <style>
+        .slider{display:none;}
+        .focus span{width:5px;height:5px;margin-left:5px;border-radius:50%;background:#CDCDCD;font-size:0}
+        .focus span.current{background:red;}
+    </style>
+</head>
 <body>
 <header>
 
@@ -93,19 +91,19 @@
          <input type="hidden" name="id" value="{iMicms:$id}" />
 		 <input type="hidden" name="token" value="{iMicms:$token}" />
             <dl class="clearfix">
-                <dt>姓名:</dt>
+                <dt><label for="zpname">姓名:</label></dt>
                 <dd><input type="text" class="input_txt" id="zpname" value="" name="zpname" placeholder="请输入姓名:"></dd>
             </dl>
             <dl class="clearfix">
-                <dt>微信号:</dt>
+                <dt><label for="wechat">微信号:</label></dt>
                 <dd><input type="text" class="input_txt" id="wechat" value="" name="wechat" placeholder="请输入姓名:"></dd>
             </dl>
             <dl class="clearfix">
-                <dt>联系电话:</dt>
+                <dt><label for="telphone">联系电话:</label></dt>
                 <dd><input type="number" class="input_txt" value="" name="telphone" id="telphone" placeholder="请输入您的真实手机号"></dd>
             </dl>
             <dl class="upload clearfix">
-                <dt>上传照片<br><eq name="picnum" value='1'>1<else/>1-{iMicms:$picnum}</eq>张:</dt>
+                <dt><label for="upload_image">上传照片</label><br><eq name="picnum" value='1'>1<else/>1-{iMicms:$picnum}</eq>张:</dt>
                 <dd class="upload_area clearfix">
                     <ul id="imglist" class="post_imglist"></ul>
                     <div class="upload_btn">
@@ -114,7 +112,7 @@
                 </dd>
             </dl>
             <dl class="clearfix">
-                <dt>参赛宣言:</dt>
+                <dt><label for="content">参赛宣言:</label></dt>
                 <dd><textarea class="textarea" placeholder="请输入参赛宣言" name="content" id="content"></textarea></dd>
             </dl>
             <div style="color: #EC6941;font-size: 16px;padding: 0 15px 15px 15px; line-height:24px; font-weight:bolder;">{iMicms:$vote['wfbmsm']}</div> <!-- 无法报名说明 -->
