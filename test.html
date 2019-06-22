@@ -23,12 +23,140 @@
     <script src="/style/js/bootstrap.min.js"></script>
 </head>
 <body>
+<header>
+    <img src="http://ww3.sinaimg.cn/mw1024/8bd1db32gw1f0bpqibp4xj20hs0rd45n.jpg" alt="shareImg" width="0px" height="0px"/>
+    <div class="m_head clearfix">
+        <img src="http://ww2.sinaimg.cn/mw1024/8bd1db32gw1f0bpqfkk9yj20hs0e1gpc.jpg" title="微应用投票活动【清新系】">
+        <div class="num_box">
+            <ul class="num_box_ul">
+                <li>
+                    <span class="text">已报名</span>
+                    <span>12</span>
+                </li>
+                <li>
+                    <span class="text">投票人次</span>
+                    <span>12</span>
+                </li>
+                <li>
+                    <span class="text">浏览量</span>
+                    <span>12247</span>
+                </li>
+            </ul>
+            <img src="./tpl/static/vote/index8/mw_004.jpg" />
+        </div>
+    </div>
+</header>
+<script type="text/javascript" src="./tpl/static/vote/js/exif.js"></script>
+<script type="text/javascript" src="./tpl/static/vote/js/binaryajax.js"></script>
+<script type="text/vbscript">
+    Function IEBinary_getByteAt(strBinary, iOffset)
+        IEBinary_getByteAt = AscB(MidB(strBinary, iOffset + 1, 1))
+    End Function
+    Function IEBinary_getBytesAt(strBinary, iOffset, iLength)
+      Dim aBytes()
+      ReDim aBytes(iLength - 1)
+      For i = 0 To iLength - 1
+       aBytes(i) = IEBinary_getByteAt(strBinary, iOffset + i)
+      Next
+      IEBinary_getBytesAt = aBytes
+    End Function
+    Function IEBinary_getLength(strBinary)
+        IEBinary_getLength = LenB(strBinary)
+    End Function
+    </script>
+<script type="text/javascript" src="./tpl/static/vote/js/lrz.bundle.js"></script>
+<script type="text/javascript" src="./tpl/static/vote/js/mobileBUGFix.mini.js"></script>
+<div class="apply">
+    <p>报名处</p>
+    <div class="blank10"></div>
+    <form action="" id="signupok" method="post" accept-charset="utf-8">
+
+        <input type="hidden" name="id" value="16" />
+        <input type="hidden" name="token" value="Eioa5C5oj3S32qhH" />
+        <dl class="clearfix">
+            <dt><label for="zpname">姓名:</label></dt>
+            <dd><input type="text" class="input_txt" id="zpname" value="" name="zpname" placeholder="请输入姓名:"></dd>
+        </dl>
+        <dl class="clearfix">
+            <dt><label for="wechat">微信号:</label></dt>
+            <dd><input type="text" class="input_txt" id="wechat" value="" name="wechat" placeholder="请输入姓名:"></dd>
+        </dl>
+        <dl class="clearfix">
+            <dt><label for="telphone">联系电话:</label></dt>
+            <dd><input type="number" class="input_txt" value="" name="telphone" id="telphone" placeholder="请输入您的真实手机号" ></dd>
+        </dl>
+        <dl class="upload clearfix">
+            <dt><label for="upload_image">上传照片<br>1-3张:</label></dt>
+            <dd class="upload_area clearfix">
+                <ul id="imglist" class="post_imglist"></ul>
+                <div class="upload_btn">
+                    <input type="file" id="upload_image" value="图片上传" accept="image/jpeg,image/gif,image/png" capture="camera">
+                </div>
+            </dd>
+        </dl>
+        <dl class="clearfix">
+            <dt><label for="content">参赛宣言:</label></dt>
+            <dd><textarea class="textarea" placeholder="请输入参赛宣言" name="content" id="content"></textarea></dd>
+        </dl>
+        <div style="color: #EC6941;font-size: 16px;padding: 0 15px 15px 15px; line-height:24px; font-weight:bolder;"></div> <!-- 无法报名说明 -->
+        <div class="btn_box">
+            <input type="submit" name="signup" class="button" value="确认报名">
+            <br>
+            <input type="button" onclick="location.href='/index.php?g=Wap&m=Vote&a=index&token=Eioa5C5oj3S32qhH&id=16'" class="button" value="返回首页">
+        </div>
+        <div class="blank10"></div>
+        <input type="hidden" name="__hash__" value="5e5b2fc4170eec76792f25b39326f4fd_741f60efc85688fdb2083cdca4536ec5" />
+    </form>
+</div>
+<section class="rules">
+
+    <div class="text">
+        <div class="prize">活动介绍：</div>
+        <div class="neirong"><span style="font-size:14px;line-height:21px;">女人如酒，每瓶酒都有故事，每个女人都是一道靓丽的风景；一杯醇香浓郁的红酒是经过特殊酿造加工而成的，所以说红酒和成熟女人的美是时间和经历所赋予的，葡萄酒比鸡汤更懂你，金色时代葡萄酒愿与成功美丽的你，共同分享灿烂人生。</span></div>    <div class="prize">活动奖品：</div>
+        <div class="neirong"><span style="line-height:21px;font-size:14px;"><img width="320" height="342" alt="" src="http://i4.tietuku.com/9e8897c2e3906267.jpg" /><br />
+</span><span style="font-size:14px;">奖品丰富，名额众多。详情点击右下角菜单查看奖项设置及奖品清单，参与奖可直接领取。&nbsp;</span><br />
+            <span style="font-size:14px;">本次活动增加了投票刮奖的环节，即每投一票都可以获得一次刮奖机会，100%中奖！&nbsp;</span><br />
+            <span style="font-size:14px;">领奖需添加客服微信号：xxxxx，奖品都是包邮的！<span style="color:#E56600;">&nbsp;<span style="color:#B8D100;">222</span></span></span><span style="font-size:14px;"></span><br />
+            <div>
+	<span style="font-size:14px;"><span style="color:#E56600;"><span style="color:#B8D100;"><br />
+</span></span></span>
+            </div></div></div>
+    <div class="text">
+        <div class="prize">活动规则：</div>
+        <div class="neirong"><img src="http://hb.hailaizi.com/uploads/E/Eioa5C5oj3S32qhH/7/9/7/e/56e3c829ad63f.png" alt="" /><span></span><span></span>
+            <div style="text-align:center;">
+                <span style="color:#E53333;line-height:1.5;font-size:14px;">1.</span><span style="line-height:1.5;font-size:14px;">作品内容为各位宝宝和爸爸的合影，参赛报名时填写信息必须是家长的真实手机号码。同一个人不可以使用多个微信号重复报名，如发现重复报名，经查证后只保留最好的照片，取票数最高。若出现相同票数时，将按照报名参加的时间先后排序。&nbsp;</span>
+            </div>
+            <div style="font-size:14px;">
+                <div style="text-align:center;">
+                    <span style="line-height:1.5;">2.同一个照片中不可以出现两个或以上参赛选手。如遇到两个或双胞胎或多个在同一张照片中，我们将视为一个人参赛按1个名额颁发奖品。</span>
+                </div>
+                <div style="text-align:center;">
+                    <span style="line-height:1.5;">3.本活动有防刷票功能，如投票系统后台发现恶意刷票，第一次将予以警告并扣除所刷票数；第二次发现将直接取消参赛资格。</span>
+                </div>
+            </div><span></span>
+            <p>
+                <span style="font-size:14px;">4.为保证活动公平，防止作弊，因此投票需要通过公众号进行操作。</span>
+            </p>
+            <span style="font-size:14px;">5.每天可给10位选手投票，每个选手仅可投一票。为防止作弊，投票需回复验证码。<br />
+6.对成功投票后，取消关注的，被投票选手的票数将自动取消。&nbsp;<br />
+7.不得盗用别人家宝宝进行比赛，一经发现取消参赛资格。&nbsp;<br />
+8.请选择并核对好孩子与爸爸的合照再上传。&nbsp;<br />
+</span><span></span>
+            <p>
+                <span style="font-size:14px;">9.投票即可获得一次刮奖机会，有众多母婴商家提供的奖品，100%中奖！&nbsp;</span>
+            </p>
+            <p>
+                <span style="font-size:14px;"><img alt="" src="http://i4.tietuku.com/505fef9a31a6f1a5.gif" /></span>
+            </p></div></div>
+    <div style=" height:60px; width:100%; display:block;"></div>
+
+</section>
 <div class="container">
 
     <div class="row">
         <div class="col-xs-12 text-center">
             <h3 style="margin-top: 0;">上传图片测试</h3>
-            <small><a href="server.html">切换至带服务端演示</a></small>
             <br>
             <small class="text-muted">配置：宽度不超过800，高度适应，70%压缩率</small>
             <br>
@@ -41,7 +169,6 @@
         </div>
     </div>
 </div>
-<script src="/style/js/lrz.bundle.js"></script>
 <script src="/style/js/index.js"></script>
 </body>
 </html>

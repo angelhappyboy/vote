@@ -14,7 +14,7 @@ window.onerror = function (errMsg, scriptURI, lineNumber, columnNumber, errorObj
 };
 
 
-document.querySelector('input').addEventListener('change', function () {
+document.querySelector('#upload_image').addEventListener('change', function () {
     var that = this;
 
     lrz(that.files[0], {
