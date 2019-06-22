@@ -1136,6 +1136,7 @@ class VoteAction extends BaseAction
 
                     if (1) {
                         var_dump($_COOKIE);
+                        var_dump($_GET);
                         die();
                     }
                 }
